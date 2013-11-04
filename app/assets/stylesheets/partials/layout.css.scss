@@ -1,0 +1,132 @@
+/*============================================================================
+  General CSS Setup
+==============================================================================*/
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: $bodyFontSize;
+	font-family: $defaultBodyFont;
+	margin: 0;
+
+}
+
+/*============================================================================
+  General Layout
+==============================================================================*/
+.full-width {
+	margin: 0 auto;
+  @extend %clearfix;
+  position: relative;
+}
+
+.page-width {
+	@extend .full-width;
+  max-width: $pageMaxWidth;
+  border: 1px solid green;
+}
+
+.row {
+	width: 100%;
+	@extend %clearfix;
+	clear: both;
+	position: relative;
+}
+
+/*================ Helper Classes ================*/
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.gutter-right {
+  margin-right: $gutter-width;
+}
+
+.gutter-top {
+  margin-top: $gutter-width;
+}
+
+.gutter-bottom {
+  margin-bottom: $gutter-width;
+}
+
+span.link-spanner {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+/*============================================================================
+  Full Screen - Column Layout
+  There are 12 columns at Full Screen, max 1200px
+==============================================================================*/
+@include bp($fullScreen, true) {
+	.page-width {
+		@include container($total-columns);
+	}
+
+	/*================ 2 Column Layout ================*/
+	.col-desktop--main__half-right {
+		@include span-columns(6, 12)
+	}
+
+	.col-desktop--main__half-left {
+		@include span-columns(6 omega, 12)
+	}
+
+	/*================ 2 Tiles ================*/
+	.tile {
+		overflow: hidden;
+		position: relative;
+		float: left;
+		min-height: convertEm(270);
+		margin-bottom: $gutter-width;
+		@extend %clearfix;
+	}
+	
+	.padded {
+		padding: defaultPadding();	
+	}
+
+	.tile__quarter {
+		@include span-columns(3, 12)
+	}
+
+	.tile__quarter--live {
+		@include box-shadow(0 1px 3px 1px rgba(51, 51, 51, 0.1));
+		background-image: url("https://github.global.ssl.fastly.net/images/modules/dashboard/bootcamp/octocat_fork.png?74c9d5ac");
+		background-color: yellow;
+	}
+}
+
+/*================ Row Helper Classes ================*/
+
+.row__last-child {
+	margin-right: 0;
+}
+
+.blue {
+	background-color: blue;
+}
+
+/*================ Images ================*/
+
+.desaturate { 
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+/*================ Full width areas ================*/
+#callout {
+	background-color: orange;
+}

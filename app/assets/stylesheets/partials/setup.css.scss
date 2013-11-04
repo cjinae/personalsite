@@ -1,0 +1,37 @@
+/*============================================================================
+  Helpers
+==============================================================================*/
+/*================ em calculations ================*/
+/* The defautl size for 'medium' text in all modern browsers is 16px
+/* http://web-design-weekly.com/blog/snippets/converts-pixels-to-ems-with-sass/ */
+@function convertEm($target, $context: 16) {
+  @return ($target / $context) * 1em;
+}
+
+/*============================================================================
+  Clearfix definition 
+==============================================================================*/
+
+%clearfix {
+ // For modern browsers
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+
+  &:after {
+    clear:both;
+  }
+
+  .lt-ie8 & {
+    //overflow: hidden;
+    zoom: 1;
+  }
+}
+
+.inline-list,
+.clearfix,
+.group {
+  @extend %clearfix;
+}

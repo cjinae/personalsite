@@ -1,0 +1,64 @@
+/*=== Breakpoints ===*/
+$tablet-threshold-max : 796;
+$tablet-threshold-min: 600;
+
+$desktop: 1200; // This is default fullscreen size of the site
+$wide: 1600;
+
+/*================ Generic Variables ================*/
+$pageWidth: 100%;
+$pageMaxWidth: convertEm($desktop);
+
+/*================ Susy Variables ================*/
+$total-columns          : 12;
+$column-width           : convertEm(78);
+$gutter-width           : convertEm(24);
+$side-gutter-width      : 0em;
+$grid-padding           : $gutter-width;  // by default, 24 px on the left and right side of the page
+$container-width: $pageMaxWidth;
+
+// phone only
+$phone : 0 4 convertEm($tablet-threshold-min - 1); // 4 cols at "phone"
+
+// tablet only
+$tablet : convertEm($tablet-threshold-min) 8 convertEm($tablet-threshold-max); // 8 cols at "tablet"
+
+// combines tablet and mobile
+$tablet-down: 0 convertEm($tablet-threshold-max);
+
+// combines tablet and desktop up, 8 columns at tablet
+$tablet-up : convertEm($tablet-threshold-min) 8;
+
+// less than the full desktop, so 959 and below
+$less-than-full-desktop : 0 convertEm($desktop);
+
+// awkward area between the full desktop size and before layout changes to tablet
+$desktop-danger-zone: convertEm($tablet-threshold-max + 1) 12 convertEm($desktop - 1);
+
+// everything > tablet, at which point a "desktop" layout kicks in
+$fullScreen: convertEm($tablet-threshold-max + 1) 12; // 12 columns at desktop
+
+// the actual desktop size, 960
+$full-desktop : convertEm($desktop) 12;
+
+// widescreen to allow for side critters to pop out
+$wideScreen: convertEm($wide) 12;
+
+$old-ie: false !default;
+
+@mixin ieFallback(){
+  @if $old-ie {
+    @content;
+  }
+}
+@mixin bp($breakpoint, $showInIE: false){
+  @if $showInIE and $old-ie {
+    @content;
+  }
+  @else {
+    @include at-breakpoint($breakpoint) {
+      @content;
+    }
+  }
+}
+
