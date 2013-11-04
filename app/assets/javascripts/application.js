@@ -16,12 +16,29 @@
 
 
 jQuery(function($){
-	$('.tile__quarter--live').hover(function() {
-		$(this).removeClass('desaturate');
-	}, function(){
-		$(this).addClass('desaturate');
-	});
+	// $('.tile__quarter--live').hover(function() {
+	// 	$(this).removeClass('desaturate');
+	// }, function(){
+	// 	$(this).addClass('desaturate');
+	// });
 
+	(function(e){
+			var tileone = $('#one')
+			var tiletwo = $('#two')
+			var tilethree = $('#three')
+			var tilefour = $('#four')
+			$('.reveal-image--one').click(function(e) {
+				$(tileone).removeClass('initial-background');
+				FadeIn();
+			});
+
+			function FadeIn(){
+				// setTimeout(function(){
+				$(tileone).addClass('reveal-background');
+				// }, 2000);
+			}
+
+	})()
 
 
 });

@@ -103,9 +103,12 @@ span.link-spanner {
 
 	.tile__quarter--live {
 		@include box-shadow(0 1px 3px 1px rgba(51, 51, 51, 0.1));
-		background-image: url("https://github.global.ssl.fastly.net/images/modules/dashboard/bootcamp/octocat_fork.png?74c9d5ac");
 		background-color: yellow;
+		&.initial-background {
+			background-image: url("https://github.global.ssl.fastly.net/images/modules/dashboard/bootcamp/octocat_fork.png?74c9d5ac");			
+		}
 	}
+
 }
 
 /*================ Row Helper Classes ================*/
@@ -114,8 +117,8 @@ span.link-spanner {
 	margin-right: 0;
 }
 
-.blue {
-	background-color: blue;
+.reveal-background {
+	background-image: url("http://icons.iconarchive.com/icons/icojoy/maneki-neko/512/cat-6-icon.png")
 }
 
 /*================ Images ================*/
