@@ -89,16 +89,21 @@ span.link-spanner {
 		position: relative;
 		float: left;
 		min-height: convertEm(270);
-		margin-bottom: $gutter-width;
+		margin-bottom: convertEm(12); //half of $gutter-width
 		@extend %clearfix;
 	}
 	
+	.circle {
+		border-radius: 50%;
+	}
+
 	.padded {
 		padding: defaultPadding();	
 	}
 
 	.tile__quarter {
-		@include span-columns(3, 12)
+		@include span-columns(3, 12);
+		margin-right: convertEm(12) //override 2%
 	}
 
 	.tile__quarter--live {
