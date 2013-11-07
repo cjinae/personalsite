@@ -1,8 +1,5 @@
 .page-width
-	%h1.color Try and fit this into a grid
-	%p MAKE THIS GRID YO
 	.row
-		.tile.tile__quarter
 		#one.tile.tile__quarter.tile__quarter--live.initial-background
 			.padded
 				%p zomg 
@@ -14,19 +11,16 @@
 			%a{href: "/#jump"}
 				%span.link-spanner
 
-		.tile.tile__quarter.row__last-child
-		.tile.tile__quarter
 		#three.tile.tile__quarter.tile__quarter--live.desaturate
 			.padded
 				%p zomg 
 			%a{href: "/#jump"}
 				%span.link-spanner
-		#four.tile.tile__quarter.tile__quarter--live.desaturate
+		#four.tile.tile__quarter.tile__quarter--live.row__last-child.desaturate
 			.padded
 				%p zomg 
 			%a{href: "/#jump"}
 				%span.link-spanner
-		.tile.tile__quarter.row__last-child
 
 .full-width#callout
 	.page-width
