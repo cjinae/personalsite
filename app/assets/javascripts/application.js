@@ -45,10 +45,9 @@ jQuery(function($){
 			$('.fill').animate({height:'100px'},1200);
 			$('.fill').animate({height:'50px'},1000);
 			$('.fill').animate({height:'0px'},1000);
-
 		})
 		$('#unfill-skill').click(function(){
-
+			
 		})
 	
 	})()
