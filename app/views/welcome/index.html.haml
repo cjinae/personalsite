@@ -1,12 +1,12 @@
 %section.header
 	.page-width
 		.row
-			#one.tile.tile__quarter.initial-background
+			#one.tile.tile__quarter.img-first
 				.padded
 					%p zomg 
 				%a{href: "/#jump"} 
 					%span.link-spanner
-			#two.tile.tile__quarter.desaturate
+			#two.tile.tile__quarter.img-first
 				.padded
 					%p zomg 
 				%a{href: "/#jump"}
@@ -33,19 +33,45 @@
 	.page-width
 		.row
 			.tile.tile__half-right
-				%p WHO I AM- Hi, my name is. Picture here?
-				%button.plain.reveal-image--one Christine
-				#jump
+				.padded
+					%h2 Lorem who
+					%p Hello - my name is Christine. I like long walks on the beach and Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. 
+
+					%button.plain.reveal-image--one Christine
+					#jump
 			.tile.tile__half-left
-				%p Some other gibberish about me
+				.padded
+					%h2 Lorem who2
+					%p Here is some more gibberish about me Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. 
 %section.what
 	.page-width
 		.row
-			%p WHAT I DO
-			%p make some visual skill item here
+			%h2 Lorem what
+			%p Lorem ipsum dolor sit amet
+			%h2#fill-skill Fill
+			%h2#unfill-skill Unfill
+			.what__skill
+				.fill
+					%p Gray
+				.fill4
+					%p Fill 4 green
+				.fill3
+					%p Fill 3 blue
+				.fill2
+					%p Fill 2 red
+				.fill1
+					%p Fill 1 yellow
+
 
 %section.contact
 	.page-width
 		.row
-			%h3 CONTACT
-			%p some giant social icons here i suppose
+			.padded
+				%h3 CONTACT
+				%p some giant social icons here i suppose

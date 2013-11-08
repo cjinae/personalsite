@@ -9,7 +9,7 @@ body {
 	font-size: $bodyFontSize;
 	font-family: $defaultBodyFont;
 	margin: 0;
-	background: #FBFBFB;
+	background: $bodyBackgroundColor;
 
 }
 
@@ -91,6 +91,7 @@ span.link-spanner {
 		float: left;
 		min-height: convertEm(270);
 		margin-bottom: convertEm(12); //half of $gutter-width
+		background: $bodyBackgroundColor;
 		@include box-shadow(0 1px 3px 1px rgba(51, 51, 51, 0.1));
 		@extend %clearfix;
 	}
@@ -106,12 +107,15 @@ span.link-spanner {
 	.tile__quarter {
 		@include span-columns(3, 12);
 		margin-right: convertEm(12); //override 2%
-			&.initial-background {
-			background-image: url("http://25.media.tumblr.com/tumblr_liu31mU0wW1qfp5jso1_500.jpg");
-			// background-size: contain;
-			overflow: hidden;
-			background-position: 20% 50%;  //This is only for demo purposes, remove later
+			&#one.img-first {
+				background-image: url("http://25.media.tumblr.com/tumblr_liu31mU0wW1qfp5jso1_500.jpg");
+				overflow: hidden;
+				background-position: 20% 50%;  //This is only for demo purposes, remove later
+				// background-size: contain;
 		}
+			&#two.img-first {
+				background-image: url("http://25.media.tumblr.com/tumblr_liu31mU0wW1qfp5jso1_500.jpg");
+			}
 	}
 
 	.tile__half-right {
@@ -144,7 +148,7 @@ span.link-spanner {
 
 /*================ Full width areas ================*/
 #sticky-menu {
-	background-color: orange;
+	background-color: #645B6C;
 	height: 50px;
 	margin-top: 300px;
 	position: relative;
@@ -154,6 +158,10 @@ span.link-spanner {
 /*============================================================================
 	Header Section
 ==============================================================================*/
+section {
+	background: $bodyBackgroundColor;	
+}
+
 section.header {
 	z-index: -1;
 	position: fixed;
@@ -164,8 +172,9 @@ section.header {
 /*============================================================================
 	Intro Section
 ==============================================================================*/
+
 section.who {
-	background-color: yellow;
+
 }
 
 section.what {
@@ -176,7 +185,57 @@ section.contact {
 
 }
 
+/*============================================================================
+	Fill Skill Section
+==============================================================================*/
+.what__skill {
+	position: absolute;
+	border: 1px solid black;
+	height: 400px;
+	width: 500px;
 
+}
+
+.fill {
+	width: 100%;
+	position: absolute;
+	height: convertEm(200);
+	border: 1px solid black;
+	background: gray;
+	z-index: 1;
+}
+
+.fill1,
+.fill2,
+.fill3, 
+.fill4 {
+	width: 100%;
+	position: relative;
+	height: 50px;
+	border: 1px solid black;
+	// z-index:-1;
+}
+
+.fill1 {
+	background: yellow;
+	// bottom: 200px;
+}
+
+.fill2 {
+	background: red;
+	// bottom: 150px;
+}
+
+.fill3 {
+	background: blue;
+	// bottom: 100px;
+
+}
+
+.fill4 {
+	background: green;
+	// bottom: 50px;
+}
 
 
 

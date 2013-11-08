@@ -28,7 +28,7 @@ jQuery(function($){
 			var tilethree = $('#three')
 			var tilefour = $('#four')
 			$('.reveal-image--one').click(function(e) {
-				$(tileone).removeClass('initial-background');
+				$(tileone).removeClass('img-first');
 				FadeIn();
 			});
 
@@ -37,8 +37,21 @@ jQuery(function($){
 				$(tileone).addClass('reveal-background');
 				// }, 2000);
 			}
+	})();
 
+	(function(){
+		$('#fill-skill').click(function(){
+			$('.fill').animate({height:'150px'},1600);
+			$('.fill').animate({height:'100px'},1200);
+			$('.fill').animate({height:'50px'},1000);
+			$('.fill').animate({height:'0px'},1000);
+
+		})
+		$('#unfill-skill').click(function(){
+
+		})
+	
 	})()
 
-
+//global end
 });
