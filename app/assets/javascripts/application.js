@@ -41,16 +41,16 @@ jQuery(function($){
 
 	(function(){
 		$('#fill-skill').click(function(){
-			$('.fill').animate({height:'150px'},1600);
-			$('.fill').animate({height:'100px'},1200);
-			$('.fill').animate({height:'50px'},1000);
+			$('.fill').animate({height:'800px'},500);
+			$('.fill').animate({height:'600px'},1600);
+			$('.fill').animate({height:'400px'},1200);
+			$('.fill').animate({height:'200px'},1000);
 			$('.fill').animate({height:'0px'},1000);
 		})
 		$('#unfill-skill').click(function(){
-			
+			$('.fill').animate({height:'800px'},500);
 		})
-	
-	})()
+	})();
 
 //global end
 });

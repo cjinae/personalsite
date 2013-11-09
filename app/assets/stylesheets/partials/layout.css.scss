@@ -159,7 +159,7 @@ span.link-spanner {
 	Header Section
 ==============================================================================*/
 section {
-	background: $bodyBackgroundColor;	
+	// background: $bodyBackgroundColor;	
 }
 
 section.header {
@@ -199,10 +199,10 @@ section.contact {
 .fill {
 	width: 100%;
 	position: absolute;
-	height: convertEm(200);
-	border: 1px solid black;
+	height: convertEm(800);
+	// border: 1px solid black;
 	background: gray;
-	z-index: 1;
+	z-index: -1;
 }
 
 .fill1,
@@ -211,31 +211,32 @@ section.contact {
 .fill4 {
 	width: 100%;
 	position: relative;
-	height: 50px;
-	border: 1px solid black;
-	// z-index:-1;
+	height: 200px;
+	// border: 1px solid black;
+	z-index: -2;
 }
 
 .fill1 {
-	background: yellow;
+	background: #A8CFAE;
 	// bottom: 200px;
 }
 
 .fill2 {
-	background: red;
+	background: #A8CFAE;
 	// bottom: 150px;
 }
 
 .fill3 {
-	background: blue;
+	background: #A8CFAE;
 	// bottom: 100px;
 
 }
 
 .fill4 {
-	background: green;
+	background: #A8CFAE;
 	// bottom: 50px;
 }
 
-
-
+.fill-image {
+	position: absolute;
+}

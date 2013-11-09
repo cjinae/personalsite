@@ -54,9 +54,13 @@
 		.row
 			%h2 Lorem what
 			%p Lorem ipsum dolor sit amet
+			.switch-wrapper
+				%input{checked: "checked", type: "checkbox", value: "1"}
+
 			%h2#fill-skill Fill
-			%h2#unfill-skill Unfill
+			%h2#unfill-skill Reset
 			.what__skill
+			%img{alt: "lego", src: "assets/fill_boxes-four.png", class: 'fill-image'}
 				.fill
 					%p Gray
 				.fill4
