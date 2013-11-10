@@ -56,6 +56,14 @@ body {
   margin-bottom: $gutter-width;
 }
 
+.centre {
+	margin: 0 auto;
+}
+
+.text-centre {
+	text-align: center;
+}
+
 span.link-spanner {
 	position: absolute;
 	width: 100%;
@@ -64,6 +72,14 @@ span.link-spanner {
 	left: 0;
 	z-index: 1;
 }
+
+/*============================================================================
+  Font Style Management
+==============================================================================*/
+.skill-text {
+	color: #FEFEFE;
+}
+
 
 /*============================================================================
   Full Screen - Column Layout
@@ -90,9 +106,16 @@ span.link-spanner {
 		float: left;
 		min-height: convertEm(150);
 		margin-bottom: convertEm(12); //half of $gutter-width
-		background: $bodyBackgroundColor;
 		@include box-shadow(0 1px 3px 1px rgba(51, 51, 51, 0.1));
 		@extend %clearfix;
+	}
+
+	.tile.blue-border{
+		// bottom border opacity
+		border-bottom: convertEm(6) solid rgb(101,192,197);
+		border-bottom: convertEm(6) solid rgba(101,192,197,0.5);
+    -webkit-background-clip: padding-box; // Safri
+    background-clip: padding-box; // IE9+, Firefox 4+, Opera, Chrome
 	}
 	
 	.circle {
@@ -106,15 +129,26 @@ span.link-spanner {
 	.tile__quarter {
 		@include span-columns(3, 12);
 		margin-right: convertEm(12); //override 2%
-			&#one.img-first {
+			&#one.img-face {
 				background-image: url("http://25.media.tumblr.com/tumblr_liu31mU0wW1qfp5jso1_500.jpg");
 				overflow: hidden;
 				background-position: 20% 50%;  //This is only for demo purposes, remove later
 				// background-size: contain;
 		}
-			&#two.img-first {
+			&#two.img-face {
 				background-image: url("http://25.media.tumblr.com/tumblr_liu31mU0wW1qfp5jso1_500.jpg");
+				background-position: 10% 10%;
 			}
+
+			&#three.img-face {
+				background-image: url("http://25.media.tumblr.com/tumblr_liu31mU0wW1qfp5jso1_500.jpg");
+				background-position: 30% 90%;
+			}
+			&#four.img-face {
+				background-image: url("http://25.media.tumblr.com/tumblr_liu31mU0wW1qfp5jso1_500.jpg");
+				background-position: 80% 20%;
+			}
+
 	}
 
 	.tile__half-right {
@@ -173,11 +207,12 @@ section.header {
 ==============================================================================*/
 
 section.who {
-	background: $bodyBackgroundColor;
+	background: #FEFEFE;
 }
 
 section.what {
-	background: $bodyBackgroundColor;
+	// background: $bodyBackgroundColor;
+	background: #65C0C5;
 	height: auto;
 }
 
@@ -190,13 +225,9 @@ section.contact {
 ==============================================================================*/
 @include bp($fullScreen, true) {	
 	.what__skill {
-		// position: absolute;
-		// background: red;
-		// width: 500px;
 	}
 
 	.fill {
-		// left: 50%;
 		width: 50%;
 		position: absolute;
 		height: convertEm(520);
@@ -208,7 +239,6 @@ section.contact {
 	.fill2,
 	.fill3, 
 	.fill4 {
-		// left: 50%;
 		width: 50%;
 		position: relative;
 		height: convertEm(130);
@@ -217,12 +247,15 @@ section.contact {
 
 	.fill1 {
 		background: #FFE0D7;
+		bottom: convertEm(4);
+		width: 60%
 	}
 	.fill2 {
 		background: #D6A79F;
 	}
 	.fill3 {
 		background: #FFE0D7;
+		height: convertEm(125);
 	} 
 	.fill4 {
 		background: #D6A79F;
