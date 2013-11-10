@@ -28,7 +28,7 @@ jQuery(function($){
 			var tilethree = $('#three')
 			var tilefour = $('#four')
 			$('.reveal-image--one').click(function(e) {
-				$(tileone).removeClass('img-first');
+				$(tileone).removeClass('img-face');
 				FadeIn();
 			});
 
@@ -39,18 +39,15 @@ jQuery(function($){
 			}
 	})();
 
-	// (function(){
-	// 	$('#fill-skill').click(function(){
-	// 		$('.fill').animate({height:'520px'},500);
-	// 		$('.fill').animate({height:'390px'},1600);
-	// 		$('.fill').animate({height:'260px'},1200);
-	// 		$('.fill').animate({height:'130px'},1000);
-	// 		$('.fill').animate({height:'0px'},1000);
-	// 	})
-	// 	$('#unfill-skill').click(function(){
-	// 		$('.fill').animate({height:'520px'},500);
-	// 	})
-	// })();
+	(function(){
+		$('#fill-skill').click(function(){
+			$('.fill').animate({height:'520px'},500);
+			$('.fill').animate({height:'390px'},1600);
+			$('.fill').animate({height:'260px'},1200);
+			$('.fill').animate({height:'130px'},1000);
+			$('.fill').animate({height:'0px'},1000);
+		})
+	})();
 
 	(function(){
 		var t = $("#activate-fill").offset().top;
@@ -126,11 +123,11 @@ jQuery(function($){
           // type
           typeString($tar, settings.text[idx], 0, settings.delay, function () {
             // delete
-            setTimeout(function () {
-              deleteString($tar, settings.delay, function () {
-                loop($tar, (idx + 1) % settings.text.length);
-              });
-            }, settings.pause);
+            // setTimeout(function () {
+            //   deleteString($tar, settings.delay, function () {
+            //     loop($tar, (idx + 1) % settings.text.length);
+            //   });
+            // }, settings.pause);
           });
 
         }($(this), 0));
@@ -153,10 +150,7 @@ jQuery(function($){
 //init
 $('#target').teletype({
   text: [
-    'planning',
-    'user stories',
-    'training',
-    'adoption'
+    'planning / user stories / training / adoption',
    ]
 });
 
@@ -168,25 +162,20 @@ $('#cursor').teletype({
 
 $('#target2').teletype({
   text: [
-    'alternative solutions',
-    'thinking ouside the box'
+    'alternative solutions / thinking ouside the box'
+    
    ]
 });
 
 $('#target3').teletype({
   text: [
-    'analytics driven ',
-    'budgeting',
-    'metrics',
+    'analytics driven / budgeting / metrics '
    ]
 });
 
 $('#target4').teletype({
   text: [
-    'html',
-    'css',
-    'javascript',
-    'ruby on rails'
+    'html / css / javascript / ruby on rails'
    ]
 });
 
