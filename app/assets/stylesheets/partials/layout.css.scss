@@ -88,7 +88,7 @@ span.link-spanner {
 		overflow: hidden;
 		position: relative;
 		float: left;
-		min-height: convertEm(270);
+		min-height: convertEm(150);
 		margin-bottom: convertEm(12); //half of $gutter-width
 		background: $bodyBackgroundColor;
 		@include box-shadow(0 1px 3px 1px rgba(51, 51, 51, 0.1));
@@ -248,21 +248,17 @@ section.contact {
 	}
 
 	.checkboard {
-		top: convertEm(50);
-		left: convertEm(300);
+		top: convertEm(20);
 	}
 	.lightbulb {
-		top: convertEm(100);
-		left: convertEm(250);
+		top: convertEm(40);
 	}
 
 	.numbers {
-		top: convertEm(150);
-		left: convertEm(275);
+		top: convertEm(60);
 	}
 
 	.code {
-		top: convertEm(200);
-		left: convertEm(230);
+		top: convertEm(80);
 	}
 }
