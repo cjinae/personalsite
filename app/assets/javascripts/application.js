@@ -39,18 +39,35 @@ jQuery(function($){
 			}
 	})();
 
+	// (function(){
+	// 	$('#fill-skill').click(function(){
+	// 		$('.fill').animate({height:'520px'},500);
+	// 		$('.fill').animate({height:'390px'},1600);
+	// 		$('.fill').animate({height:'260px'},1200);
+	// 		$('.fill').animate({height:'130px'},1000);
+	// 		$('.fill').animate({height:'0px'},1000);
+	// 	})
+	// 	$('#unfill-skill').click(function(){
+	// 		$('.fill').animate({height:'520px'},500);
+	// 	})
+	// })();
+
 	(function(){
-		$('#fill-skill').click(function(){
-			$('.fill').animate({height:'800px'},500);
-			$('.fill').animate({height:'600px'},1600);
-			$('.fill').animate({height:'400px'},1200);
-			$('.fill').animate({height:'200px'},1000);
-			$('.fill').animate({height:'0px'},1000);
-		})
-		$('#unfill-skill').click(function(){
-			$('.fill').animate({height:'800px'},500);
-		})
+		var t = $("#activate-fill").offset().top;
+
+		$(document).scroll(function(){
+			if($(this).scrollTop() > t)
+			{	
+				$('.fill').stop().animate({height:'520px'},6000);
+				$('.fill').stop().animate({height:'390px'},6000);
+				$('.fill').stop().animate({height:'260px'},6000);
+				$('.fill').stop().animate({height:'130px'},6000);
+				$('.fill').stop().animate({height:'0px'},6000);
+			}
+		});
+
 	})();
+
 
 //global end
 });
