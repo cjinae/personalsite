@@ -29,53 +29,60 @@
 			%h3 
 			This is where the sticky menu will go
 
-%section.who
-	.page-width
-		.row
-			.tile.tile__half-right
+.main-container
+	%section.who
+		.page-width
+			.row
+				.tile.tile__half-right
+					.padded
+						%h2 Lorem who
+						%p Hello - my name is Christine. I like long walks on the beach and Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. 
+
+						%button.plain.reveal-image--one Christine
+						#jump
+				.tile.tile__half-left
+					.padded
+						%h2 Lorem who2
+						%p Here is some more gibberish about me Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. 
+	%section.what#activate-fill
+		.page-width
+			.row
+				%h2 Lorem what
+				%p Lorem ipsum dolor sit amet
+				.col-desktop--main__half-left
+					%p this is the next area
+					%p this is on the left and side
+					.skill-descriptions
+						.skill.checkboard
+							%h2 Product Management
+						.skill.lightbulb
+							%h2 Creative Problem Solving
+						.skill.numbers
+							%h2 A Numbers Gal
+						.skill.code
+							%h2 Web Development
+				.col-desktop--main__half-right 
+					%p#fill-skill Fill
+					%p#unfill-skill Reset
+					.what__skill
+						%img{alt: "lego", src: "assets/fill_boxes-four.png", class: 'fill-image'}
+							.fill
+							.fill4
+							.fill3
+							.fill2
+							.fill1
+
+
+
+	%section.contact
+		.page-width
+			.row
 				.padded
-					%h2 Lorem who
-					%p Hello - my name is Christine. I like long walks on the beach and Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. 
-
-					%button.plain.reveal-image--one Christine
-					#jump
-			.tile.tile__half-left
-				.padded
-					%h2 Lorem who2
-					%p Here is some more gibberish about me Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. 
-%section.what
-	.page-width
-		.row
-			%h2 Lorem what
-			%p Lorem ipsum dolor sit amet
-			.switch-wrapper
-				%input{checked: "checked", type: "checkbox", value: "1"}
-
-			%h2#fill-skill Fill
-			%h2#unfill-skill Reset
-			.what__skill
-			%img{alt: "lego", src: "assets/fill_boxes-four.png", class: 'fill-image'}
-				.fill
-					%p Gray
-				.fill4
-					%p Fill 4 green
-				.fill3
-					%p Fill 3 blue
-				.fill2
-					%p Fill 2 red
-				.fill1
-					%p Fill 1 yellow
-
-
-%section.contact
-	.page-width
-		.row
-			.padded
-				%h3 CONTACT
-				%p some giant social icons here i suppose
+					%h3 CONTACT
+					%p some giant social icons here i suppose

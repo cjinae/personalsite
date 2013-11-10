@@ -10,7 +10,6 @@ body {
 	font-family: $defaultBodyFont;
 	margin: 0;
 	background: $bodyBackgroundColor;
-
 }
 
 /*============================================================================
@@ -76,11 +75,11 @@ span.link-spanner {
 	}
 
 	/*================ 2 Column Layout ================*/
-	.col-desktop--main__half-right {
+	.col-desktop--main__half-left {
 		@include span-columns(6, 12)
 	}
 
-	.col-desktop--main__half-left {
+	.col-desktop--main__half-right {
 		@include span-columns(6 omega, 12)
 	}
 
@@ -163,7 +162,7 @@ section {
 }
 
 section.header {
-	z-index: -1;
+	z-index: -10;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -174,69 +173,96 @@ section.header {
 ==============================================================================*/
 
 section.who {
-
+	background: $bodyBackgroundColor;
 }
 
 section.what {
-
+	background: $bodyBackgroundColor;
+	height: auto;
 }
 
 section.contact {
-
+	background: yellow;
 }
 
 /*============================================================================
 	Fill Skill Section
 ==============================================================================*/
-.what__skill {
-	position: absolute;
-	border: 1px solid black;
-	height: 400px;
-	width: 500px;
+@include bp($fullScreen, true) {	
+	.what__skill {
+		// position: absolute;
+		// background: red;
+		// width: 500px;
+	}
 
-}
+	.fill {
+		// left: 50%;
+		width: 50%;
+		position: absolute;
+		height: convertEm(520);
+		background: #EDEDEC;
+		z-index: 2;
+	}
 
-.fill {
-	width: 100%;
-	position: absolute;
-	height: convertEm(800);
-	// border: 1px solid black;
-	background: gray;
-	z-index: -1;
-}
+	.fill1,
+	.fill2,
+	.fill3, 
+	.fill4 {
+		// left: 50%;
+		width: 50%;
+		position: relative;
+		height: convertEm(130);
+		z-index: 1;
+	}
 
-.fill1,
-.fill2,
-.fill3, 
-.fill4 {
-	width: 100%;
-	position: relative;
-	height: 200px;
-	// border: 1px solid black;
-	z-index: -2;
-}
+	.fill1 {
+		background: #FFE0D7;
+	}
+	.fill2 {
+		background: #D6A79F;
+	}
+	.fill3 {
+		background: #FFE0D7;
+	} 
+	.fill4 {
+		background: #D6A79F;
+	}
 
-.fill1 {
-	background: #A8CFAE;
-	// bottom: 200px;
-}
+	.fill-image {
+		z-index: 3;
+		position: absolute;
+		max-height: convertEm(520);
+	}
 
-.fill2 {
-	background: #A8CFAE;
-	// bottom: 150px;
-}
+/*============================================================================
+	Describe Skill Section
+==============================================================================*/
 
-.fill3 {
-	background: #A8CFAE;
-	// bottom: 100px;
+	.skill-descriptions {
+		position: absolute;
+		height: convertEm(520);
+	}
 
-}
+	.skill {
+		position: relative;
+	}
 
-.fill4 {
-	background: #A8CFAE;
-	// bottom: 50px;
-}
+	.checkboard {
+		top: convertEm(50);
+		left: convertEm(300);
+	}
+	.lightbulb {
+		top: convertEm(100);
+		left: convertEm(250);
+	}
 
-.fill-image {
-	position: absolute;
+	.numbers {
+		top: convertEm(150);
+		left: convertEm(275);
+	}
+
+	.code {
+		top: convertEm(200);
+		left: convertEm(230);
+	}
 }
