@@ -1,39 +1,37 @@
 %section.header
 	.page-width
 		.row
-			#one.tile.tile__quarter.img-first
+			#one.tile.tile__quarter.img-face
 				.padded
-					%p zomg 
 				%a{href: "/#jump"} 
 					%span.link-spanner
-			#two.tile.tile__quarter.img-first
+			#two.tile.tile__quarter.img-face
 				.padded
-					%p zomg 
 				%a{href: "/#jump"}
 					%span.link-spanner
 
-			#three.tile.tile__quarter.desaturate
+			#three.tile.tile__quarter.img-face.desaturate
 				.padded
-					%p zomg 
 				%a{href: "/#jump"}
 					%span.link-spanner
-			#four.tile.tile__quarter.row__last-child.desaturate
+			#four.tile.tile__quarter.row__last-child.img-face.desaturate
 				.padded
-					%p zomg 
 				%a{href: "/#jump"}
 					%span.link-spanner
+		.row
+			%h1.text-centre HI THERE, I'M CHRISTINE
 
 .full-width#sticky-menu
 	.page-width
 		.row
-			%h3 
+			%h3
 			This is where the sticky menu will go
 
 .main-container
 	%section.who
 		.page-width
-			.row
-				.tile.tile__half-right
+			.row.gutter-top
+				.tile.tile__half-right.blue-border
 					.padded
 						%h2 WHO I AM
 						%p Hello - my name is Christine. I like long walks on the beach and Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -43,7 +41,7 @@
 
 						%button.plain.reveal-image--one Christine
 						#jump
-				.tile.tile__half-left
+				.tile.tile__half-left.blue-border
 					.padded
 						%h2 WHAT I DO
 						%p Here is some more gibberish about me Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -52,41 +50,37 @@
 						consequat. 
 	%section.what#activate-fill
 		.page-width
-			.row
+			.row.gutter-top
 				%h2 AT A GLANCE
-				.col-desktop--main__half-left
-					%p this is the next area
-					%p this is on the left and side
-					.skill-descriptions
-						.skill.checkboard
-							%h2 PRODUCT MANAGEMENT
-							%span#target
-							%span#cursor
-						.skill.lightbulb
-							%h2 CREATIVE PROBLEM SOLVER
-							%span#target2
-						.skill.numbers
-							%h2 A NUMBERS GAL
-							%span#target3
-						.skill.code
-							%h2 WEB DEVELOPMENT
-							%span#target4
-				.col-desktop--main__half-right 
-					%p#fill-skill Fill
-					%p#unfill-skill Reset
+				.col-desktop--main__half-left 
 					.what__skill
-						%img{alt: "lego", src: "assets/fill_boxes-four.png", class: 'fill-image'}
+						%img{alt: "lego", src: "assets/fill_boxes-transl.png", class: 'fill-image'}
 							.fill
 							.fill4
 							.fill3
 							.fill2
 							.fill1
-
+				.col-desktop--main__half-right
+					.skill-descriptions
+						.skill.checkboard
+							%h2.skill-text PRODUCT MANAGEMENT
+							%span#target
+							%span#cursor
+						.skill.lightbulb
+							%h2.skill-text CREATIVE PROBLEM SOLVER
+							%span#target2
+						.skill.numbers
+							%h2.skill-text A NUMBERS GAL
+							%span#target3
+						.skill.code
+							%h2.skill-text WEB DEVELOPMENT
+							%span#target4
+						%p#fill-skill refill
 
 
 	%section.contact
 		.page-width
-			.row
+			.row.gutter-top
 				.padded
 					%h3 CONTACT
 					%p some giant social icons here i suppose
