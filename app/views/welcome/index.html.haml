@@ -1,20 +1,20 @@
 %section.header
 	.page-width
 		.row
-			#one.tile.tile__quarter.img-face
+			#one.tile.tile__quarter.img-face.pink-border
 				.padded
 				%a{href: "/#jump"} 
 					%span.link-spanner
-			#two.tile.tile__quarter.img-face
+			#two.tile.tile__quarter.img-face.pink-border
 				.padded
 				%a{href: "/#jump"}
 					%span.link-spanner
 
-			#three.tile.tile__quarter.img-face.desaturate
+			#three.tile.tile__quarter.img-face.pink-border.desaturate
 				.padded
 				%a{href: "/#jump"}
 					%span.link-spanner
-			#four.tile.tile__quarter.row__last-child.img-face.desaturate
+			#four.tile.tile__quarter.row__last-child.img-face.pink-border.desaturate
 				.padded
 				%a{href: "/#jump"}
 					%span.link-spanner
@@ -50,7 +50,7 @@
 						consequat. 
 	%section.what#activate-fill
 		.page-width
-			.row.gutter-top
+			.row.gutter-top.gutter-bottom
 				%h2 AT A GLANCE
 				.col-desktop--main__half-left 
 					.what__skill
@@ -63,19 +63,27 @@
 				.col-desktop--main__half-right
 					.skill-descriptions
 						.skill.checkboard
-							%h2.skill-text PRODUCT MANAGEMENT
-							%span#target
-							%span#cursor
+							.tile__plain.pink-border
+								.padded
+									%h2.skill-text PRODUCT MANAGEMENT
+									%span#target
+									%span#cursor
 						.skill.lightbulb
-							%h2.skill-text CREATIVE PROBLEM SOLVER
-							%span#target2
+							.tile__plain.pink-border
+								.padded
+									%h2.skill-text CREATIVE PROBLEM SOLVER
+									%span#target2
 						.skill.numbers
-							%h2.skill-text A NUMBERS GAL
-							%span#target3
+							.tile__plain.pink-border
+								.padded
+									%h2.skill-text A NUMBERS GAL
+									%span#target3
 						.skill.code
-							%h2.skill-text WEB DEVELOPMENT
-							%span#target4
-						%p#fill-skill refill
+							.tile__plain.pink-border
+								.padded
+									%h2.skill-text WEB DEVELOPMENT
+									%span#target4
+			%p#fill-skill refill
 
 
 	%section.contact

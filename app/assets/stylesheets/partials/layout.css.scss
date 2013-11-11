@@ -78,6 +78,7 @@ span.link-spanner {
 ==============================================================================*/
 .skill-text {
 	color: #FEFEFE;
+	margin-top: 0;
 }
 
 
@@ -110,13 +111,21 @@ span.link-spanner {
 		@extend %clearfix;
 	}
 
-	.tile.blue-border{
+	.blue-border{
 		// bottom border opacity
 		border-bottom: convertEm(6) solid rgb(101,192,197);
 		border-bottom: convertEm(6) solid rgba(101,192,197,0.5);
     -webkit-background-clip: padding-box; // Safri
     background-clip: padding-box; // IE9+, Firefox 4+, Opera, Chrome
 	}
+
+	.pink-border{
+		border-bottom: convertEm(6) solid rgb(214,167,159);
+		border-bottom: convertEm(6) solid rgba(214,167,159,0.5);
+    -webkit-background-clip: padding-box; // Safri
+    background-clip: padding-box; // IE9+, Firefox 4+, Opera, Chrome
+	}
+
 	
 	.circle {
 		border-radius: 50%;
@@ -148,7 +157,6 @@ span.link-spanner {
 				background-image: url("http://25.media.tumblr.com/tumblr_liu31mU0wW1qfp5jso1_500.jpg");
 				background-position: 80% 20%;
 			}
-
 	}
 
 	.tile__half-right {
@@ -157,6 +165,15 @@ span.link-spanner {
 
 	.tile__half-left{
 		@include span-columns(6 omega, 12)
+	}
+
+	.tile__plain {
+		overflow: hidden;
+		position: relative;
+		float: left;
+		min-height: convertEm(50);
+		margin-bottom: convertEm(6); //quarter of $gutter-width
+		@extend %clearfix;
 	}
 
 }
@@ -211,8 +228,8 @@ section.who {
 }
 
 section.what {
-	// background: $bodyBackgroundColor;
-	background: #65C0C5;
+	background: $bodyBackgroundColor;
+	// background: #65C0C5;
 	height: auto;
 }
 
@@ -228,11 +245,13 @@ section.contact {
 	}
 
 	.fill {
-		width: 50%;
+		width: 30%;
 		position: absolute;
 		height: convertEm(520);
 		background: #EDEDEC;
 		z-index: 2;
+		left: 20%;
+
 	}
 
 	.fill1,
@@ -243,28 +262,31 @@ section.contact {
 		position: relative;
 		height: convertEm(130);
 		z-index: 1;
+		left: 42%;
+
 	}
 
 	.fill1 {
-		background: #FFE0D7;
+		background: #65C0C5;
 		bottom: convertEm(4);
 		width: 60%
 	}
 	.fill2 {
-		background: #D6A79F;
+		background: #A09881;
 	}
 	.fill3 {
-		background: #FFE0D7;
+		background: #65C0C5;
 		height: convertEm(125);
 	} 
 	.fill4 {
-		background: #D6A79F;
+		background: #A09881;
 	}
 
 	.fill-image {
 		z-index: 3;
 		position: absolute;
 		max-height: convertEm(520);
+		left: 20%;
 	}
 
 /*============================================================================
@@ -273,7 +295,7 @@ section.contact {
 
 	.skill-descriptions {
 		position: absolute;
-		height: convertEm(520);
+		// height: convertEm(520);
 	}
 
 	.skill {
@@ -281,17 +303,17 @@ section.contact {
 	}
 
 	.checkboard {
-		top: convertEm(20);
+		// top: convertEm(20);
 	}
 	.lightbulb {
-		top: convertEm(40);
+		// top: convertEm(40);
 	}
 
 	.numbers {
-		top: convertEm(60);
+		// top: convertEm(60);
 	}
 
 	.code {
-		top: convertEm(80);
+		// top: convertEm(80);
 	}
 }

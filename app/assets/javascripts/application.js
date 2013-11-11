@@ -55,11 +55,11 @@ jQuery(function($){
 		$(document).scroll(function(){
 			if($(this).scrollTop() > t)
 			{	
-				$('.fill').stop().animate({height:'520px'},6000);
-				$('.fill').stop().animate({height:'390px'},6000);
-				$('.fill').stop().animate({height:'260px'},6000);
-				$('.fill').stop().animate({height:'130px'},6000);
-				$('.fill').stop().animate({height:'0px'},6000);
+				$('.fill').stop().animate({height:'520px'},2000);
+				$('.fill').stop().animate({height:'390px'},2000);
+				$('.fill').stop().animate({height:'260px'},2000);
+				$('.fill').stop().animate({height:'130px'},2000);
+				$('.fill').stop().animate({height:'0px'},2000);
 			}
 		});
 
