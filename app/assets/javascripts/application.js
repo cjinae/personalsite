@@ -52,132 +52,132 @@ jQuery(function($){
 	(function(){
 		var t = $("#activate-fill").offset().top;
 
-		$(document).scroll(function(){
+		$(document).one("scroll",function(){
 			if($(this).scrollTop() > t)
 			{	
-				$('.fill').stop().animate({height:'520px'},2000);
-				$('.fill').stop().animate({height:'390px'},2000);
-				$('.fill').stop().animate({height:'260px'},2000);
-				$('.fill').stop().animate({height:'130px'},2000);
-				$('.fill').stop().animate({height:'0px'},2000);
+				$('.fill').animate({height:'520px'},500)
+				$('.fill').animate({height:'390px'},1600)
+				$('.fill').animate({height:'260px'},1200)
+				$('.fill').animate({height:'130px'},1000)
+				$('.fill').animate({height:'0px'},1000)
 			}
 		});
 
 	})();
 
-(function ($) {
-  // writes the string
-  //
-  // @param jQuery $target
-  // @param String str
-  // @param Numeric cursor
-  // @param Numeric delay
-  // @param Function cb
-  // @return void
-  function typeString($target, str, cursor, delay, cb) {
-    $target.html(function (_, html) {
-      return html + str[cursor];
-    });
-
-    if (cursor < str.length - 1) {
-      setTimeout(function () {
-        typeString($target, str, cursor + 1, delay, cb);
-      }, delay);
-    }
-    else {
-      cb();
-    }
-  }
-
-  // clears the string
-  //
-  // @param jQuery $target
-  // @param Numeric delay
-  // @param Function cb
-  // @return void
-  function deleteString($target, delay, cb) {
-    var length;
-
-    $target.html(function (_, html) {
-      length = html.length;
-      return html.substr(0, length - 1);
-    });
-
-    if (length > 1) {
-      setTimeout(function () {
-        deleteString($target, delay, cb);
-      }, delay);
-    }
-    else {
-      cb();
-    }
-  }
-
-  // jQuery hook
-  $.fn.extend({
-    teletype: function (opts) {
-      var settings = $.extend({}, $.teletype.defaults, opts);
-
-      return $(this).each(function () {
-        (function loop($tar, idx) {
-          // type
-          typeString($tar, settings.text[idx], 0, settings.delay, function () {
-            // delete
-            // setTimeout(function () {
-            //   deleteString($tar, settings.delay, function () {
-            //     loop($tar, (idx + 1) % settings.text.length);
-            //   });
-            // }, settings.pause);
-          });
-
-        }($(this), 0));
+  (function ($) {
+    // writes the string
+    //
+    // @param jQuery $target
+    // @param String str
+    // @param Numeric cursor
+    // @param Numeric delay
+    // @param Function cb
+    // @return void
+    function typeString($target, str, cursor, delay, cb) {
+      $target.html(function (_, html) {
+        return html + str[cursor];
       });
-    }
-  });
 
-  // plugin defaults  
-  $.extend({
-    teletype: {
-      defaults: {
-        delay: 100,
-        pause: 5000,
-        text: []
+      if (cursor < str.length - 1) {
+        setTimeout(function () {
+          typeString($target, str, cursor + 1, delay, cb);
+        }, delay);
+      }
+      else {
+        cb();
       }
     }
+
+    // clears the string
+    //
+    // @param jQuery $target
+    // @param Numeric delay
+    // @param Function cb
+    // @return void
+    function deleteString($target, delay, cb) {
+      var length;
+
+      $target.html(function (_, html) {
+        length = html.length;
+        return html.substr(0, length - 1);
+      });
+
+      if (length > 1) {
+        setTimeout(function () {
+          deleteString($target, delay, cb);
+        }, delay);
+      }
+      else {
+        cb();
+      }
+    }
+
+    // jQuery hook
+    $.fn.extend({
+      teletype: function (opts) {
+        var settings = $.extend({}, $.teletype.defaults, opts);
+
+        return $(this).each(function () {
+          (function loop($tar, idx) {
+            // type
+            typeString($tar, settings.text[idx], 0, settings.delay, function () {
+              // delete
+              // setTimeout(function () {
+              //   deleteString($tar, settings.delay, function () {
+              //     loop($tar, (idx + 1) % settings.text.length);
+              //   });
+              // }, settings.pause);
+            });
+
+          }($(this), 0));
+        });
+      }
+    });
+
+    // plugin defaults  
+    $.extend({
+      teletype: {
+        defaults: {
+          delay: 100,
+          pause: 5000,
+          text: []
+        }
+      }
+    });
+  }(jQuery));
+
+  //init
+  $('#target').teletype({
+    text: [
+      'planning / user stories / training / adoption',
+     ]
   });
-}(jQuery));
 
-//init
-$('#target').teletype({
-  text: [
-    'planning / user stories / training / adoption',
-   ]
-});
+  $('#cursor').teletype({
+    text: ['_', ' '],
+    delay: 0,
+    pause: 500
+  });
 
-$('#cursor').teletype({
-  text: ['_', ' '],
-  delay: 0,
-  pause: 500
-});
+  $('#target2').teletype({
+    text: [
+      'alternative solutions / thinking ouside the box'
+      
+     ]
+  });
 
-$('#target2').teletype({
-  text: [
-    'alternative solutions / thinking ouside the box'
-    
-   ]
-});
+  $('#target3').teletype({
+    text: [
+      'analytics driven / budgeting / metrics '
+     ]
+  });
 
-$('#target3').teletype({
-  text: [
-    'analytics driven / budgeting / metrics '
-   ]
-});
-
-$('#target4').teletype({
-  text: [
-    'html / css / javascript / ruby on rails'
-   ]
-});
+  $('#target4').teletype({
+    text: [
+      'html / css / javascript / ruby on rails'
+     ]
+  });
 
 //global end
 });
