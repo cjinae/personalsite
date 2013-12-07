@@ -11,7 +11,6 @@ gem 'sass-rails', '~> 4.0.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-gem 'compass-rails', '2.0.alpha.0'
 gem 'susy', '1.0.8'
 
 # Use Uglifier as compressor for JavaScript assets
